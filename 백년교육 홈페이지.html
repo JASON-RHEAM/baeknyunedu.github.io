@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>백년교육</title>
+
+  <style>
+    /* ===== 전체 기본 설정 ===== */
+    body {
+      margin: 0;
+      font-family: "맑은 고딕", Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    /* ===== 상단 헤더 ===== */
+    header {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    /* ===== 메뉴 ===== */
+    nav {
+      background-color: #2563eb;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav li {
+      padding: 15px 25px;
+      cursor: pointer;
+      color: white;
+      font-weight: bold;
+    }
+
+    nav li:hover {
+      background-color: #1e40af;
+    }
+
+    /* ===== 메인 내용 ===== */
+    .content {
+      max-width: 900px;
+      margin: 30px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+    }
+
+    .section {
+      display: none;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    h2 {
+      color: #1e3a8a;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== 헤더 ===== -->
+  <header>
+    <h1>(주)백년교육</h1>
+    <p>학생의 가능성을 실력으로 완성합니다</p>
+  </header>
+
+  <!-- ===== 메뉴 ===== -->
+  <nav>
+    <ul>
+      <li onclick="showSection('about')">학원소개</li>
+      <li onclick="showSection('philosophy')">교육철학</li>
+      <li onclick="showSection('curriculum')">커리큘럼</li>
+      <li onclick="showSection('consulting')">입시컨설팅</li>
+      <li onclick="showSection('contact')">상담문의</li>
+    </ul>
+  </nav>
+
+  <!-- ===== 내용 영역 ===== -->
+  <div class="content">
+
+    <div id="about" class="section active">
+      <h2>학원소개</h2>
+      <p>
+       모든 학습의 시작은 국어, 결과의 완성은 [백년교육]입니다.
+      </p>
+      <p>
+        교육은 눈앞의 성적을 넘어 아이의 미래를 설계하는 '백년대계'여야 합니다. 
+        백년교육은 모든 과목 성적의 열쇠가 '국어(문해력)'에 있다는 확신으로 설립된 입시 전문 학원입니다.
+      </p>
+      <p>
+        수학 문제를 풀지 못하는 이유가 계산력이 부족해서일까요? 
+        영어 지문을 해석하고도 답을 틀리는 이유는 무엇일까요? 
+        핵심은 결국 지문을 정확히 이해하고 논리적으로 추론하는 힘에 있습니다. 
+        백년교육은 국어를 기반으로 한 탄탄한 독해력을 바탕으로, 전 과목의 성적 향상을 이끄는 
+        압도적인 입시 전략을 제시합니다. 기초부터 실전까지, 백년을 가는 실력을 만듭니다.
+      </p>
+    </div>
+
+    <div id="philosophy" class="section">
+      <h2>교육철학</h2>
+      <p>
+        우리는 단순한 문제 풀이가 아닌
+        <strong>생각하는 힘</strong>을 키우는 교육을 추구합니다.
+      </p>
+      <p>
+        "글을 읽는 힘이 생기면 세상 모든 문제가 풀리기 시작합니다."
+         우리 아이의 100년 앞을 내다보는 안목, 백년교육이 그 시작과 끝을 함께하겠습니다.
+      </p>
+      <ul>
+        <li>POINT 1. 문해력이 곧 성적: 복잡한 지문을 꿰뚫는 분석력 배양</li>
+        <li>POINT 2. 전 과목 시너지: 국어 실력 향상을 통한 전 과목 이해도 극대화</li>
+        <li>POINT 3. 철저한 입시 분석: 변화하는 입시 제도에 맞춘 맞춤형 로드맵</li>
+      </ul>
+    </div>
+
+    <div id="curriculum" class="section">
+      <h2>커리큘럼</h2>
+      <ul>
+        <li>초등부 | 문해력의 기초: 독서와 글쓰기를 통해 '생각하는 근육'을 키우고 학습 어휘량을 폭발적으로 늘립니다.</li>
+        <li>중등부 | 논리적 사고의 완성: 고등 내신과 수능의 기초가 되는 비문학 분석과 문학적 추론 능력을 극대화합니다.</li>
+        <li>고등부 | 실전 입시 전략: 등급을 가르는 킬러 문항 정복부터 수능 실전 감각까지, 압도적인 고득점을 완성합니다.</li>
+        <li>심화반: 상위권 및 특목·자사고 대비</li>
+        <li>개별 클리닉: 약점 과목 집중 보완</li>
+
+        <li>수행평가 특화 교육 (Performance Assessment)
+            내신 비중이 높아지는 입시 환경에서 수행평가는 이제 선택이 아닌 필수입니다. 
+            백년교육은 학생이 스스로 자신의 생각을 논리적으로 서술할 수 있도록 돕습니다.</li>
+            <ol>
+               <li>보고서 및 에세이 작성: 주제 선정부터 개요 짜기, 논리적 서술까지 1:1 밀착 지도합니다.</li>
+
+               <li>발표 및 토론 대비: 자신의 논리를 명확하게 전달하는 스피치와 발표 자료 구성 능력을 키워줍니다.</li>
+
+               <li>과목별 융합 관리: 국어 실력을 바탕으로 사회, 과학 등 전 과목 수행평가의 퀄리티를 높입니다.</li>
+            </ol>   
+      </ul>
+    </div>
+
+    <div id="consulting" class="section">
+      <h2>입시컨설팅</h2>
+      <p>
+        공부만 잘한다고 대학에 가는 시대는 끝났습니다. 
+        백년교육은 학생 개개인의 강점과 약점을 분석하여 최적의 입시 전략을 설계하고 
+        최신 입시 트렌드를 반영한 1:1 맞춤 컨설팅을 제공합니다.
+      </p>
+      <ul>
+        <li>생활기록부 관리: 진로에 맞는 탐구 활동과 독서 기록을 체계적으로 가이드합니다.</li>
+        <li>진학 로드맵 설계: 학생의 성적 추이와 성향에 맞는 목표 대학 및 전형(수시/정시)을 제시합니다.</li>
+        <li>지속적인 멘토링: 단순한 학습 지도를 넘어, 목표를 향해 지치지 않고 달릴 수 있는 페이스메이커가 되어줍니다.</li>
+        <li>학생 성적 분석 및 전략 수립</li>
+        <li>학생부 및 비교과 관리</li>
+        <li>수시·정시 지원 전략 컨설팅</li>
+        <li>학부모 상담 진행</li>
+      </ul>
+    </div>
+
+    <div id="contact" class="section">
+      <h2>상담문의</h2>
+      <p>📞 카카오톡: greatedu100</p>
+      <p>📍 위치: 경기 용인시 기흥구 탑실로 105 3층 </p>
+      <p>🕘 상담시간: 평일 오후 2시 ~ 10시</p>
+    </div>
+
+  </div>
+
+  <!-- ===== 자바스크립트 ===== -->
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
